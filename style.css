@@ -116,7 +116,6 @@ img {
   margin:0 auto; 
   padding:1.5rem; 
 }
-
 /* HEADER */
 .header{
   position: fixed; 
@@ -124,6 +123,7 @@ img {
   background: var(--light);
    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, 
    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+   z-index: 999; 
 }
 .header .header_wrapper{
   display: flex; 
@@ -206,7 +206,7 @@ img {
 }
 /* BANNER */
 .banner{
-  padding-top: 13rem;
+  padding-top: 18rem;
   padding-bottom: 5rem; 
   background: var(--light); 
 }
@@ -219,7 +219,29 @@ img {
 .banner .banner_img{
   display: flex; 
   gap: 3rem; 
-  align-items: center;  
+  align-items: center; 
+  position: relative; 
+}
+.banner .banner_img img{
+  position: relative;
+  z-index: 100;
+  max-height: 45rem;
+}
+.banner .banner_wrapper:hover .banner_img::before{
+left: -20rem;
+transition: 0.5s ease;
+}
+.banner .banner_img .images img{
+  min-height: 25rem; 
+  width: 100%;
+  object-fit: center; 
+}
+.banner .banner_img::before{
+  content: url("/IMG/map (1).png");
+  position: absolute;  
+  top: -10rem;
+  left: -12rem; 
+  transition: 0.5s ease;
 }
 .banner .banner_text h1{
   font-size: 6rem; 
@@ -235,11 +257,39 @@ img {
 .banner .banner_text{
   position: relative;
 }
+.banner .banner_wrapper:hover .banner_text::after{
+  transform: rotate(-360deg);
+  transition: 0.5s ease;
+}
 .banner .banner_text::after{
   content: url("/IMG/airplane.png");
   position: absolute;
-  bottom: -18rem;
-  right: 0rem; 
+  bottom: -20rem;
+  transition: 0.5s ease;
+}
+@media screen and (max-width:500px){
+  .banner .banner_wrapper{
+    display: grid;
+    grid-template-columns: 1fr; 
+  }
+  .banner .banner_text h1{
+    font-size: 4rem; 
+    text-align: center; 
+  }
+  .banner .banner_text{
+    text-align: center;
+  }
+  .banner .banner_text::after{
+    content: "";
+  }
+  .banner .banner_wrapper:hover .banner_img::before{
+    left: -12rem;
+    transition: 0.5s ease;
+    }
+    .banner .banner_img .images img{
+      min-height: 20rem; 
+    }
+
 }
 /* REPEATABLE PATTERNS */
 :root{
