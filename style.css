@@ -289,7 +289,21 @@ transition: 0.5s ease;
     .banner .banner_img .images img{
       min-height: 20rem; 
     }
-
+}
+/* TOP  */
+.top{
+  background: var(--primary);
+  padding: 5rem 0;
+}
+.top h2{
+  font-size: 3rem;
+  color: var(--light);
+  font-weight: 600;
+}
+.top .top_wrapper{
+  margin_top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 /* REPEATABLE PATTERNS */
 :root{
@@ -314,3 +328,13 @@ transition: 0.5s ease;
   color: var(--primary);
   border: 1px solid var(--primary); 
 }
+
+
+
+  
+  
+
+
+
+
+
