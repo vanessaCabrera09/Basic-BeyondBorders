@@ -290,20 +290,245 @@ transition: 0.5s ease;
       min-height: 20rem; 
     }
 }
-/* TOP  */
-.top{
-  background: var(--primary);
+/* TOP */
+.top {
   padding: 5rem 0;
+  background: var(--primary);
 }
-.top h2{
-  font-size: 3rem;
+.top h2 {
   color: var(--light);
+  font-size: 3rem;
   font-weight: 600;
+  margin-bottom: 5rem;
 }
-.top .top_wrapper{
-  margin_top: 5rem;
+.top .top_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+.top .top_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--light);
+  text-align: justify;
+}
+.top .top_media{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+.top .top_media img{
+  min-height: 40rem;
+  border-radius: 3rem; 
+  transition: 0.5s ease;
+}
+.top .top_img{
+  position: relative;
+}
+.top .top_img .top_img_item{
+  overflow: hidden; 
+  border-radius: 3rem; 
+}
+.top .top_img .top_img_text{
+  background: rgba(0, 0, 0, 0.5); 
+  position: absolute; 
+  top: 0;
+  height: 100%; 
+  width: 100%; 
+  border-radius: 3rem; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end; 
+  padding: 3rem; 
+}
+.top .top_img .top_img_text h4{
+  color: var(--light);
+  font-weight: 600; 
+  font-size: 2rem;
+}
+.top .top_img .top_img_text p{
+  color: var(--light);
+}
+.top .top_img:hover img{
+  scale: 1.1;
+  transition: 0.5s ease; 
+}
+@media screen and (max-width: 500px){
+  .top .top_text{
+    display: none; 
+  }
+  .top .top_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .top h2{
+    text-align: center; 
+  }
+}
+/* LATEST  */
+.latest{
+  background: var(--light);
+  padding: 5rem 0;
+}
+.latest h2{
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.latest .latest_wrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 3rem;
+}
+.latest .latest_left img{
+  border-radius: 3rem; 
+  margin-bottom: 3rem;
+  max-height: 500px; 
+  width: 100%;
+  object-fit: cover;
+}
+.latest .latest_left h3{
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 800; 
+}
+.latest .latest_left h6{
+  font-size: 1.3rem; 
+  margin: 1rem 0; 
+}
+.latest .latest_left p{
+  color: var(--primary);
+  text-align: justify; 
+}
+.latest .latest_item{
+  display: flex;
+  gap: 2rem; 
+  color: var(--primary);
+  align-items: center;
+}
+.latest .latest_right{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.latest .latest_item h3{
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 800; 
+  margin: 2rem 0;
+}
+/* BEYOND  */
+.beyond {
+  background: var(--primary);
+  padding: 5rem 0;
+  color: var(--light);
+}
+.beyond h2 {
+  color: var(--light);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.beyond .beyond_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+.beyond .beyond_info {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.beyond .beyond_info img {
+  border-radius: 5rem;
+  width: 10rem;
+}
+.beyond .beyond_info h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.beyond .beyond_info h4 {
+  font-weight: 600;
+}
+.beyond .beyond_content h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  max-width: 50rem;
+  margin: 3rem 0;
+}
+.beyond .beyond_content p {
+  text-align: justify;
+}
+.beyond .beyond_img {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+.beyond .beyond_img img {
+  height: 100%;
+  object-fit: center;
+}
+@media screen and (max-width: 500px) {
+  .beyond h2 {
+    text-align: center;
+  }
+  .beyond .beyond_img {
+    display: none;
+  }
+  .beyond .beyond_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
+  .beyond .beyond_content h3 {
+    max-width: 30rem;
+    text-align: center;
+    margin: 3rem auto;
+  }
+}
+/* TRAVEL  */
+.travel{
+  padding: 5rem 0; 
+  background-image:url("/IMG/cta-img.png");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.travel h2{
+  color: var(--light);
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.travel .travel_input{
+  text-align: center; 
+  margin: 2rem 0; 
+}
+.travel .travel_input input{
+  height: 5rem; 
+  border-radius: 1rem;
+  padding: 1.5rem; 
+}
+.travel .travel_input input:focus{
+  outline: none; 
+}
+.travel p{
+  color: var(--light);
+  text-align: center; 
+}
+.travel p a{
+  color: var(--light);
+  text-decoration: underline; 
+}
+/* FOOTER  */
+.footer{
+  background: var(--primary);
+  color: var(--light);
+  padding: 2rem 0; 
 }
 /* REPEATABLE PATTERNS */
 :root{
